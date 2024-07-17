@@ -1,6 +1,6 @@
 import { LoremFormat } from "../constants/formats";
-import Generator, { IGeneratorOptions } from "../lib/generator";
-declare class LoremIpsum {
+import Generator, { IGeneratorOptions } from "./generator";
+declare class KhmerLorem {
     format: LoremFormat;
     suffix?: string | undefined;
     generator: Generator;
@@ -12,4 +12,4 @@ declare class LoremIpsum {
     generateSentences(num?: number): string;
     generateParagraphs(num: number): string;
 }
-export default LoremIpsum;
+export default KhmerLorem;

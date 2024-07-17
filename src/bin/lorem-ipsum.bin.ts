@@ -1,5 +1,5 @@
 import { Option, program } from "commander";
-import { loremIpsum } from "..";
+import { khmerLorem } from "..";
 import { FORMATS, FORMAT_PLAIN } from "../constants/formats";
 import { REGEX } from "../constants/regex";
 import { DESCRIPTION, USAGE } from "./constants/cli";
@@ -32,7 +32,7 @@ program
       process.exit(1);
     }
 
-    const output = loremIpsum({
+    const output = khmerLorem({
       count,
       format: program.getOptionValue('format'),
       units,

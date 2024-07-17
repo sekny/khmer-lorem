@@ -10,9 +10,9 @@ import {
 } from "./constants/units";
 import { WORDS } from "./constants/words";
 import { IPrng } from "./lib/generator";
-import LoremIpsum from "./lib/LoremIpsum";
+import KhmerLorem from "./lib/KhmerLorem";
 
-export interface ILoremIpsumParams {
+export interface IKhmerLoremParams {
   count?: number;
   format?: LoremFormat;
   paragraphLowerBound?: number;
@@ -25,7 +25,7 @@ export interface ILoremIpsumParams {
   suffix?: string;
 }
 
-const loremIpsum = ({
+const khmerLorem = ({
   count = 1,
   format = FORMAT_PLAIN,
   paragraphLowerBound = 3,
@@ -36,7 +36,7 @@ const loremIpsum = ({
   units = UNIT_SENTENCES,
   words = WORDS,
   suffix = "",
-}: ILoremIpsumParams = {}): string => {
+}: IKhmerLoremParams = {}): string => {
   const options = {
     random,
     sentencesPerParagraph: {
@@ -50,7 +50,7 @@ const loremIpsum = ({
     },
   };
 
-  const lorem: LoremIpsum = new LoremIpsum(options, format, suffix);
+  const lorem: KhmerLorem = new KhmerLorem(options, format, suffix);
 
   switch (units) {
     case UNIT_PARAGRAPHS:
@@ -67,4 +67,4 @@ const loremIpsum = ({
   }
 };
 
-export { loremIpsum, LoremIpsum };
+export { khmerLorem as khmerLorem, KhmerLorem as KhmerLorem };

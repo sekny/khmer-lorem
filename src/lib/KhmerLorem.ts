@@ -1,9 +1,9 @@
 import { FORMAT_HTML, FORMAT_PLAIN, FORMATS, LoremFormat } from "../constants/formats";
 import { LINE_ENDINGS } from "../constants/lineEndings";
-import Generator, { IGeneratorOptions } from "../lib/generator";
+import Generator, { IGeneratorOptions } from "./generator";
 import { isNode, isReactNative, isWindows, makeArrayOfStrings } from "../util";
 
-class LoremIpsum {
+class KhmerLorem {
   public generator: Generator;
 
   constructor(
@@ -60,4 +60,4 @@ class LoremIpsum {
   }
 }
 
-export default LoremIpsum;
+export default KhmerLorem;

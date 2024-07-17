@@ -98,7 +98,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:src/lib/LoremIpsum.ts
+SF:src/lib/KhmerLorem.ts
 FN:9,(anonymous_1)
 FN:22,(anonymous_2)
 FN:34,(anonymous_3)

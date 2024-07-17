@@ -23,10 +23,10 @@ The class is the recommended way to use `khmer-lorem` since version 2.
 It makes it simpler to generate text using the same options.
 
 ```js
-import { LoremIpsum } from "khmer-lorem";
-// const LoremIpsum = require("khmer-lorem").LoremIpsum;
+import { KhmerLorem } from "khmer-lorem";
+// const KhmerLorem = require("khmer-lorem").KhmerLorem;
 
-const lorem = new LoremIpsum({
+const lorem = new KhmerLorem({
   sentencesPerParagraph: {
     max: 8,
     min: 4
@@ -50,19 +50,19 @@ compatible with the default function exported by `khmer-lorem` version
 any issue; they can just continue using this library as they did before.
 
 ```js
-import { loremIpsum } from "khmer-lorem";
-// const loremIpsum = require("khmer-lorem").loremIpsum;
+import { khmerLorem } from "khmer-lorem";
+// const khmerLorem = require("khmer-lorem").khmerLorem;
 
-loremIpsum(); // generates one sentence
+khmerLorem(); // generates one sentence
 ```
 
 Like before, you can pass in a number of options to customize the output.
 The example below shows the default options.
 
 ```js
-import { loremIpsum } from "khmer-lorem";
+import { khmerLorem } from "khmer-lorem";
 
-loremIpsum({
+khmerLorem({
   count: 1,                // Number of "words", "sentences", or "paragraphs"
   format: "plain",         // "plain" or "html"
   paragraphLowerBound: 3,  // Min. number of sentences per paragraph.

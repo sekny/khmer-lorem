@@ -1,4 +1,4 @@
-import { loremIpsum } from ".";
+import { khmerLorem } from ".";
 import ProcessHelper from "../test/util/ProcessHelper";
 import { LINE_ENDINGS } from "./constants/lineEndings";
 import {
@@ -12,13 +12,13 @@ import {
  } from "./constants/units";
 import { SUPPORTED_PLATFORMS } from "./constants/platforms";
 
-describe("loremIpsum", () => {
+describe("khmerLorem", () => {
   const process = new ProcessHelper();
 
   afterEach(() => process.resetPlatform());
 
   test("Should return one sentence by default", () => {
-    const result = loremIpsum();
+    const result = khmerLorem();
     expect(result.slice(-1)).toEqual(".");
 
     const sentences = result.split(". ");
@@ -30,7 +30,7 @@ describe("loremIpsum", () => {
     const count = 5;
     const someUnits: LoremUnit[] = [UNIT_PARAGRAPHS, UNIT_PARAGRAPH];
     someUnits.forEach((units) => {
-      const results = loremIpsum({ count, units });
+      const results = khmerLorem({ count, units });
       const paragraphs = results.split(LINE_ENDINGS.WIN32);
       expect(paragraphs).toHaveLength(count);
     });
@@ -40,7 +40,7 @@ describe("loremIpsum", () => {
     const count = 3;
     const someUnits: LoremUnit[] = [UNIT_SENTENCES, UNIT_SENTENCE];
     someUnits.forEach((units) => {
-      const results = loremIpsum({ count, units });
+      const results = khmerLorem({ count, units });
       const sentences = results.split(". ");
       expect(sentences).toHaveLength(count);
     });
@@ -48,6 +48,6 @@ describe("loremIpsum", () => {
 
   test("Should return an empty string for invalid units", () => {
     // @ts-ignore
-    expect(loremIpsum({ count: 7, units: "unknown" })).toEqual("");
+    expect(khmerLorem({ count: 7, units: "unknown" })).toEqual("");
   });
 });

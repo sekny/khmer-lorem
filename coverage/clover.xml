@@ -54,7 +54,7 @@
     </package>
     <package name="src.lib">
       <metrics statements="48" coveredstatements="48" conditionals="21" coveredconditionals="21" methods="16" coveredmethods="16"/>
-      <file name="LoremIpsum.ts" path="/Users/htb/Documents/Code/khmer-lorem/src/lib/LoremIpsum.ts">
+      <file name="KhmerLorem.ts" path="/Users/htb/Documents/Code/khmer-lorem/src/lib/KhmerLorem.ts">
         <metrics statements="23" coveredstatements="23" conditionals="9" coveredconditionals="9" methods="8" coveredmethods="8"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
