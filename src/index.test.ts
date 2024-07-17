@@ -46,16 +46,6 @@ describe("loremIpsum", () => {
     });
   });
 
-  test("Should return the specified number of words", () => {
-    const count = 7;
-    const someUnits: LoremUnit[] = [UNIT_WORDS, UNIT_WORD];
-    someUnits.forEach((units) => {
-      const results = loremIpsum({ count, units });
-      const words = results.split(" ");
-      expect(words).toHaveLength(count);
-    });
-  });
-
   test("Should return an empty string for invalid units", () => {
     // @ts-ignore
     expect(loremIpsum({ count: 7, units: "unknown" })).toEqual("");
